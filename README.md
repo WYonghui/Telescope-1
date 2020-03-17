@@ -18,7 +18,7 @@ According to our analysis, we verify that the root cause of computing resource u
 
 # Architecture of Telescope 
 
-![Image text](https://github.com/TelescopeScheduler/img-folder/blob/master/architecture.pdf)
+![image](https://github.com/TelescopeScheduler/img-folder/blob/master/architecture.pdf)
 
 
 ACKNOWLEDGEMENTS   
