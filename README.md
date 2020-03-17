@@ -2,7 +2,7 @@
 
 Telescope is a  novel  job scheduling scheme in RDMA-assisted big data processing system. Telescope exploits the structure feature of stage dependency and prioritizes the stages whose completion can enable more schedulable stages. Comprehensive experiments using large-scale traces collected from real world show that Telescope reduces job completion time and job makespan compared to existing schemes.
 
-# Introduction
+## Introduction
 
 Since the emergence of big data applications, big data processing systems, such as Hadoop and Spark, have been widely used in both industry and academia. A job in the processing system is commonly represented as a direct acyclic graph (DAG), where a vertex denotes a computation stage
 that executes user-defined function and an edge depicts the data transfers between two stages as well as the dependency between them. A stage that reads data from its dependent stages cannot start until all of them are finished. Typically, a computation stage consists of multiple small tasks that execute the same user-defined function. A task is the basic execution unit to perform computation, while multiple tasks can run in parallel to improve resource efficiency. As different jobs with diverse characteristics (e.g., different DAG structures) commonly coexist in the big data processing system, efficient task scheduling is vital for overall system performance.
@@ -16,12 +16,14 @@ To exploit RDMA networks, Lu et al. recently proposed RDMA-Spark, which integrat
 
 According to our analysis, we verify that the root cause of computing resource under-utilization in RDMA-assisted big data processing system is the lack of schedulable tasks while the system has available slots. Based on the observation, we propose Telescope, a novel job scheduling scheme in RDMA-assisted big data processing system. Telescope investigates stage dependencies, and proposes a stage dependency aware scheduling scheme, which maintains a long-term vision and prioritizes stages whose completion can enable more stages to execute in the subsequent scheduling. We implement Telescope on top of RDMA-Spark, and conduct comprehensive experiments to evaluate its performance using real world cluster traces. Results show that Telescope reduces job completion time and job makespan compared to existing schemes.
 
-# Architecture of Telescope 
+## Architecture of Telescope 
 
 ![Architecture of Telescope](https://github.com/TelescopeScheduler/img-folder/blob/master/TelescopeArchitecture.jpg)
 
 Telescope contains two main processing module: influence assessment module and influence-aware scheduling module. When a job is submitted, the influence assessment module gets DAG structure of the job. Then it investigates the stage dependencies and assesses influence for every stage. It also maintains a parallel stage queue to store parallel stages waiting for scheduling. After pre-processed by the influence assessment module, the influence-aware scheduling module schedules stages according to their influences. Specifically,
 when some slots become available, the influence-aware scheduling module always firstly schedules tasks from the stage with the maximum influence. As the job runs, the influence assessment module also collects runtime states of tasks and dynamically adjusts the scheduling scheme. We also extend our design to further utilize available job profiles, e.g., stage duration, when the profile can be known apriori.
+
+# How to use?
 
 ACKNOWLEDGEMENTS   
 RDMA-Spark. <http://hibd.cse.ohio-state.edu/#spark>
