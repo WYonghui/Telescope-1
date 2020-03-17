@@ -33,6 +33,9 @@ Download the source code of [Spark 2.1.0](https://github.com/apache/spark/tree/b
 ```
 ./build/mvn -Pyarn -Phadoop-2.7 -Dhadoop.version=2.7.3 -Phive -Phive-thriftserver -DskipTests clean package -pl core
 ```
+
+For ease of use, one can also download the compiled jar file spark-core_2.11-2.1.0.jar from core/spark-core_2.11-2.1.0.jar.
+
 ## Using Telescope
 After building the core module, one can get spark-core_2.11-2.1.0.jar in terget file. Replace the same file in RDMA-Spark/jars/ with this file, and one can deploy the system refer to the RDMA-Spark document from [RDMA-Spark Userguide](http://hibd.cse.ohio-state.edu/static/media/rdma-spark/rdma-spark-0.9.5-userguide.pdf).
 
