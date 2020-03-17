@@ -12,7 +12,13 @@ Traditional scheduling schemes in big data processing systems often give priorit
 However, today’s modern datacenters are commonly equipped with high performance networks such as Remote Direct Memory Access (RDMA). With the equipment of RDMA, network is no longer a bottleneck of big data processing systems and the traditional network optimized
 scheduling strategies become unsatisfied.
 
+To exploit RDMA networks, Lu et al. recently proposed RDMA-Spark, which integrates RDMA with Apache Spark to accelerate big data processing. However, RDMA-Spark does not elaborate job scheduling. We examine the system efficiency of RDMA-Spark using experiments with real world. The result shows a significant fraction of 30% of slots are wasted during job execution. Such serious under-utilization of CPU slots indicates new opportunities for improving the system performance for RDMA-assisted big data processing systems.
+
 According to our analysis, we verify that the root cause of computing resource under-utilization in RDMA-assisted big data processing system is the lack of schedulable tasks while the system has available slots. Based on the observation, we propose Telescope, a novel job scheduling scheme in RDMA-assisted big data processing system. Telescope investigates stage dependencies, and proposes a stage dependency aware scheduling scheme, which maintains a long-term vision and prioritizes stages whose completion can enable more stages to execute in the subsequent scheduling. We implement Telescope on top of RDMA-Spark, and conduct comprehensive experiments to evaluate its performance using real world cluster traces. Results show that Telescope reduces job completion time and job makespan compared to existing schemes.
+
+# Architecture of Telescope 
+
+![Image text](https://github.com/TelescopeScheduler/img-folder/blob/master/architecture.pdf)
 
 
 ACKNOWLEDGEMENTS   
