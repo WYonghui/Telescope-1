@@ -42,5 +42,6 @@ Telescope is developed in National Engineering Research Center for Big Data Tech
 
 Copyright (C) 2019, STCS & CGCL and Huazhong University of Science and Technology.
 
-# ACKNOWLEDGEMENTS   
+<!-- # ACKNOWLEDGEMENTS   
 RDMA-Spark. <http://hibd.cse.ohio-state.edu/#spark>
+-->
