@@ -20,6 +20,8 @@ According to our analysis, we verify that the root cause of computing resource u
 
 ![Architecture of Telescope](https://github.com/TelescopeScheduler/img-folder/blob/master/TelescopeArchitecture.jpg)
 
+Telescope contains two main processing module: influence assessment module and influence-aware scheduling module. When a job is submitted, the influence assessment module gets DAG structure of the job. Then it investigates the stage dependencies and assesses influence for every stage. It also maintains a parallel stage queue to store parallel stages waiting for scheduling. After pre-processed by the influence assessment module, the influence-aware scheduling module schedules stages according to their influences. Specifically,
+when some slots become available, the influence-aware scheduling module always firstly schedules tasks from the stage with the maximum influence. As the job runs, the influence assessment module also collects runtime states of tasks and dynamically adjusts the scheduling scheme. We also extend our design to further utilize available job profiles, e.g., stage duration, when the profile can be known apriori.
 
 ACKNOWLEDGEMENTS   
 RDMA-Spark. <http://hibd.cse.ohio-state.edu/#spark>
