@@ -25,7 +25,7 @@ when some slots become available, the influence-aware scheduling module always f
 
 # How to use?
 
-We implement Telescope on top of [RDMA-Spark](http://hibd.cse.ohio-state.edu/#spark) and [Apache Spark](http://spark.apache.org/) (verson 2.1.0). As we can not get the source code of RDMA-Spark, we implement our scheduling strategy atop Apache Storm and replace the corresponding jar files of RDMA-Spark with our jars, e.g. spark-core_2.11-2.1.0.jar. 
+We implement Telescope on top of [RDMA-Spark](http://hibd.cse.ohio-state.edu/#spark) and [Apache Spark](http://spark.apache.org/) (verson 2.1.0). As we can not get the source code of RDMA-Spark, we implement our scheduling strategy atop Apache Spark and replace the corresponding jar files of RDMA-Spark with our jars, e.g. spark-core_2.11-2.1.0.jar. 
 
 ## Building Telescope
 
