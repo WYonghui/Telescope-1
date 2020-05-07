@@ -45,13 +45,13 @@ If you want to know more detailed information, please refer to this paper:
 
 Sijie Wu, Yonghui Wang, Hanhua Chen, Hai Jin. "Telescope: Efficient Job Scheduling in RDMA-assisted Big Data Processing Systems" in Proceedings of IEEE 39th International Conference on Distributed Computing Systems (ICDCS), 2019.
 -->
-
+<!--
 # Authors and Copyright
 
 Telescope is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Sijie Wu (wsj@hust.edu.cn),Yonghui Wang (yhw@hsut.edu.cn), Hanhua Chen (chen@hust.edu.cn), Hai Jin (hjin@hust.edu.cn).
 
 Copyright (C) 2020, STCS & CGCL and Huazhong University of Science and Technology.
 
-<!-- # ACKNOWLEDGEMENTS   
+ # ACKNOWLEDGEMENTS   
 RDMA-Spark. <http://hibd.cse.ohio-state.edu/#spark>
 -->
